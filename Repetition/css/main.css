@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+body{
+    background: cornflowerblue;
+    padding: 20px;
+}
+
+#unique{
+    color: white;
+}
+
+.colorful{
+    color: orangered;
+    margin: 40px 0px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.emphazise{
+    font-style: italic;
+}
+
+.stylish{
+    color: aquamarine;
+    font-style: italic;
+    text-decoration: overline;
+}
+
+section{
+    background: brown;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+section:nth-child(even){
+    color:greenyellow;
+}

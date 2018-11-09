@@ -1,0 +1,347 @@
+@charset "utf-8";
+
+body{
+    background-color:;
+    margin:0px;
+}
+label{
+    cursor:pointer;
+}
+/***************************/
+/* Full screen welcome img */
+/***************************/
+
+/*parralax*/
+.background{
+    margin-top:;
+    background-image: url("img/bg.png");
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    z-index: 99;
+    
+}
+
+/*Space for background*/
+.top{
+    height: 90%;   
+}
+/*Navigationbar*/
+nav{
+    height: 8%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+nav ul{
+    display:flex;
+    padding: 0px; /*Remove the extra space from being a list*/
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style-type: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    height: 100%;
+    transition: 0.4s;
+    letter-spacing: 10px;
+    color: #50526c;
+    cursor: pointer;
+    
+
+}
+nav ul li:hover{
+    color:#eee;
+    transform:scale(0.9);
+        
+}
+
+
+/****************/
+/* Welcome text */
+/****************/
+
+.Welcome{
+    height: 300px;
+    width: 100%;
+    background-color:#eee;
+    margin-top: -50px;
+}
+.Welcome h3{
+    display: flex;
+    font-family:sans-serif;
+    font-size: 50px;
+    letter-spacing: 30px;
+    justify-content: center;
+}
+.Welcome p{
+}
+
+/*************/
+/* Portfolio */
+/*************/
+
+
+
+/******************CHECKBOX HACK***********************/
+/**  (Displays hidden text for portfolio pictures)   **/
+/** Hide the acctual checkbox                       /**/
+/**/input[type=checkbox]{                           /**/
+/**/    display: none;                              /**/
+/**/}                                               /**/
+/** Hide the content                                /**/
+/**/.item-checked{                                  /**/
+/**/       display: none;                           /**/
+/**/    }                                           /**/
+/** When checked display content                    /**/ 
+/**/input[type=checkbox]:checked ~ .item-checked{   /**/
+/**/    transition: 1s;                             /**/         
+/**/    display: block;                             /**/
+/**/}                                               /**/
+/**/input[type=checkbox]:checked ~ .item-1 article{ /**/
+/**/    filter:blur(4px);                           /**/
+/**/}                                               /**/ 
+/******************************************************/
+
+
+
+main{
+    display: flex;
+    background-color: #eee;
+    
+}
+
+.item article{ 
+    margin: 5px;
+    transition: 0.5s;
+    color: white;
+
+}
+/*label is what am clicking to activate my checkbox*/
+.item article label{
+    transition: 0.4s;
+    color: #eee;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Spicy Rice', cursive;
+
+
+}
+
+.item article label:hover{
+    transform: scale(0.9);
+    color: orangered;
+}
+
+::selection{
+    background-color: transparent;
+}
+
+/*Section nr.1*/
+.item-1{
+    flex: 2.5; 
+}
+
+.item-1 article{
+    height: 200px;
+    background-color: #ffd32a;
+    transition:0.5s;
+    background-size: cover;
+}
+
+/*Programmer*/
+.item-1 article:nth-child(1){
+    background-image: url(img/programming.jpeg);
+    background-size:;
+}
+
+
+/*Esport*/
+.item-1 article:nth-child(2){
+    background-image: url(img/gamer.jpg);
+}
+/*Music*/
+.item-1 article:nth-child(3){ 
+    height: 300px;
+    background-image: url(img/music.jpg);
+}
+
+/*Section nr.2*/
+.item-2{    
+    flex: 1;
+}
+
+.item-2 article{
+    height: 250px;
+    background-image:url(img/authors.jpg);
+    background-size:cover;
+}
+.item-2 article:nth-child(2){
+    height: 450px;
+    background-image:url(img/photographer.jpg);
+    background-size:;
+}
+
+
+/*Section nr.3*/
+.item-3 {
+    flex: 1;
+}
+
+.item-3 article{
+    height: 200px;
+    background-image: url(img/disigner.jpg);
+    background-size: cover; 
+}
+.item-3 article:nth-child(2){
+    height: 300px;
+    background-image: url(img/game-developer.jpg);
+    background-size: ;
+}
+.item-3 article:nth-child(3){
+    height:;
+    background-image: url(img/dreamer.jpg);
+    background-size: cover;
+}
+
+
+/****************/
+/* How it works */
+/****************/
+.main-content{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main-content img{
+    width: 20%;
+}
+.text{
+    width:20%;
+    padding:;
+}
+
+.main-content:nth-child(odd) {
+    background-color: #ddd;
+    flex-flow: row;
+    }
+.main-content:nth-child(even) {
+        background-color: #ccc;
+    flex-flow: row-reverse;
+    }
+
+/****************/
+/* Contact Form */
+/****************/
+
+#contactButton{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+#contactButtonArrow{
+     transition: all .3s;
+     display: flex;
+     justify-content: center;
+     font-size: 40px;
+}
+
+.contactOption:hover #contactButtonArrow {
+    font-size: 50px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    display: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Doing th chackbox hack again*/
+input[type=checkbox]{                           
+    display: none;                              
+}                                               
+
+input[type=checkbox]:checked ~ #contactButtonArrow {                         transform: rotate(180deg);
+} 
+
+
+ 
+input[type=checkbox]:checked ~ .container{   
+    transition: 1s;                                      
+    display: block;                             
+}  
+
+/*Button takes you back to top ("Full screen welcome img")*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #ffdd59;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+  
+}
+
+#myBtn:hover {
+  background-color: #555;
+  transform: scale(1.25);
+  color:#ffdd59;
+}
+
+
+
+
+
+
+
+
+
+
+
+

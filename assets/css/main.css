@@ -1,0 +1,105 @@
+@charset 'utf-8';
+
+body{
+    background-color: #eee;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+}
+header h1{
+    background-color: red;
+}
+header i{
+    background-color: blue;
+}
+
+
+main{
+    list-style: none;
+    margin: auto;
+    width: 50%;
+    display:grid;
+    grid-gap: 5px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "topLeft topLeft topRight "
+    "topLeft topLeft midRight"
+    "bottom bottom bottom";
+}
+
+main a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.item1_Hidden{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.link{
+    min-height: 190px;
+    transition:1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.link h1{
+    font-size: 50px;
+    font-family: Century Gothic; 
+    color: #7f8c8d;
+    opacity: 1;
+    transition: 1s;
+    text-shadow: 1px 1px 1px black;
+    z-index:2;
+}
+
+
+.link:hover h1{
+    opacity: 0;
+}
+
+.link:hover{
+    transform:scale(0.95);
+    
+}
+
+
+
+.link1{
+    grid-area: topLeft;
+    background-color: blueviolet;
+    background-image: url(../images/chris-ried-521588-unsplash.jpg);
+    background-size: cover;
+    z-index:0;
+}
+.link2{
+    grid-area: topRight;
+    background-color: cornflowerblue;
+    background-image:url(../images/fabian-grohs-597395-unsplash.jpg);
+    background-size: cover; 
+
+}
+.link3{
+    grid-area: midRight;
+    background-color: rebeccapurple;
+    background-image: url(../images/nikolay-tarashchenko-551719-unsplash.jpg);
+    background-size: cover;
+}
+
+.link4{
+    grid-area: bottom;
+    background-color: aqua; 
+    background-image: url(../images/diana-macesanu-488916-unsplash.jpg);
+    background-size: cover;
+}
+
+
