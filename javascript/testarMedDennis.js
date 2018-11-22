@@ -21,3 +21,4 @@ document.getElementsByTagName("button")[0].addEventListener("click", function(){
 document.querySelector("button").addEventListener("dblclick", function(){
     myTime = setInterval(myTimer, 1000);
 });
+
