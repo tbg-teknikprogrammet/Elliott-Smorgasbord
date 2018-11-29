@@ -1,5 +1,5 @@
 
- var numberOfRight = 0;
+var numberOfRight = 0;
 var arr1 = ["1","2","3"];
 var arr2 = ["1","2","3"];
 function reverse(arr1){
@@ -18,4 +18,26 @@ function reverse(arr1){
  if(reverse == true){
      console.log("sant")
  }
+
+
+
+
+var sum = 0;
+var arrayOfNumbers = ["1","2","3","4","5","6","7","8","9","10"];
+
+arrayOfNumbers.foreach(function(Adding){
+    console.log(sum);
+});
+     
+
+     
+    // for(var i = arren.length; i >=0; i--){
+        // sum = sum + arren[i];
+    // }
+    // console.log(sum)
+
+//  }
+
+//  sumOfArray(arrayOfNumbers);
+
 
