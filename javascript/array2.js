@@ -20,12 +20,12 @@ function reverse(arr1){
  }
 
 
-
-
-var sum = 0;
-var arrayOfNumbers = ["1","2","3","4","5","6","7","8","9","10"];
-
-arrayOfNumbers.foreach(function(Adding){
+var variabelDeclaration ="Whatever"; // change when you want to 
+const pi = 3.1415;
+let sum = 0;
+var arrayOfNumbers = [1,2,3];
+arrayOfNumbers.forEach(function(entry) {
+    sum = sum + entry
     console.log(sum);
 });
      
@@ -41,3 +41,4 @@ arrayOfNumbers.foreach(function(Adding){
 //  sumOfArray(arrayOfNumbers);
 
 
+// Dennis upg 
