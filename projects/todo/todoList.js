@@ -2,57 +2,41 @@
 
 var toDoList = []; // emptey to do list
 
-
-
-
 document.getElementsByTagName("button")[0].addEventListener("click", function(){
-var number = prompt("what you wanna do?");     
-    switch(number){
 
-         // // Add something to the list 
-         case "1": 
-            // Create an HTML list item (li) that displays you todo thing 
-            var li = document.createElement("li");
-            let tempStrAns = prompt("Write the thing you need to add");
-            toDoList.push(tempStrAns);// Also add it to the javascript list so we can store it 
-            
-            var t = document.createTextNode("" + tempStrAns);
-            li.appendChild(t);
-            if(tempStrAns === ""){// If user have not writen anything
-                alert("you must add something");
-            }
+    var tempStrAns = prompt("what you wanna add?");     
+    // Create an HTML list item (li) that displays you todo thing 
+    var li = document.createElement("li");            
+    li.setAttribute("id", "elementId")
+    toDoList.push(tempStrAns);// Also add it to the javascript list so we can store it
+    var t = document.createTextNode("" + tempStrAns);
+    li.appendChild(t);
+        if(tempStrAns === ""){// If user have not writen anything
+            alert("you must add something");
+        }
 
-            else{// If he have, add that thing to the todo list
-                document.getElementById("myUl").appendChild(li);
-            }
-            // Create an "X" mark beside the newly added list element. (this is remove button)
-            var p = document.createElement("p")
-            removeButton = document.createTextNode("X")
-            p.appendChild(removeButton);
-            document.getElementsByTagName("li").appendChild(p)
-           
-         break;
+        else{// If he have, add that thing to the todo list
+            document.getElementById("myUl").appendChild(li);
+        }
 
-         // View al things inside you to do list
-         case "2":
-            ViewToDoList();
-         break;
-
-         // Remove something from the list   
-         case "3":
-            // Let's show the List of thing to make the choice 
-            // easier for the user.
-            ViewToDoList();
-            let tempIntAns = prompt("What thing would you like to delete, pleas enter a numerical answer")
-            toDoList.splice(tempIntAns, 1)
-         break;
-
-     }
+       
 });
 
-// The funtion writes out all the elements in the to do list 
-function ViewToDoList (){  
-    for(let i = 0; i <= toDoList.length-1; i++){
-        console.log(toDoList[i]);
-    }
-}
+var lis = document.querySelectorAll("li");// a list of al the html li (list elements)
+var deleted = 0; // using this binary number to scratch out certain li. But also to regret the scratch 
+for(var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener("click", function() { // if a click on any li then do this function ↓
+        // if an element has previosly been scratched(deleted) then revive it
+        if(deleted >0){
+            this.style.textDecoration = "none";
+            this.style.backgroundColor = ""; // removes the color added by the js... so now its original
+            deleted --;
+        }
+        // otherwise delete it know
+        else{
+            this.style.textDecoration = "line-through";
+            this.style.backgroundColor = "#444";
+            deleted ++;//next time we know to not delete but to revive 
+        }
+    });
+};

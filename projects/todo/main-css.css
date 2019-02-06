@@ -6,7 +6,14 @@ body{
 }
 /* This makes the two big elementa (listHolder and main) to become flex */
 .superduperthanosfuckingquantommonsterWrapper{
-    display: flex;
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'aside main main . '
+    'aside main main . '
+    'aside article article article'
+    'footer footer footer footer';
 }
 
 /********** ↓ LOGO ↓ ***********/
@@ -18,20 +25,16 @@ h1{
     justify-content: center;
 }
 
-
-h1::first-letter {
-    color: blue;
-}
 /********** ↑ LOGO ↑ ***********/
 
 
 /********** ↓ MAIN CONTENT ↓ ***********/
 .main{
+    grid-area: main;
+    width: 1fr 1fr;
     background-color:rgb(155, 154, 154);
     padding: 5px;
-    margin-left:5%;
     height: 300px;
-    width: 50%;
 }
 
 .main h2{
@@ -67,20 +70,66 @@ h1::first-letter {
 
 
 /********** ↓ THE LIST ↓ ***********/
-li{
-    list-style: none;
-    font-size:30px;
-    display:flex;
-    color: white;
-}
-li p{
-    color:limegreen;
-}
 
 .listHolder{
+    display: grid;
+    grid-area: aside;
+    width: 1fr;
     background-color:#d47724;
-    width: 20%;
-    height: auto;
+    max-height: 600px;
 }
+
+.listHolder h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#eee;
+    padding:0px;
+    margin:0px;
+    height: max-content;
+    
+}
+
+li{
+    list-style: none;
+    padding: 3px;
+    font-size:30px;
+    color: white;
+    width: auto;
+}
+ul{
+padding:0px;
+}
+li:nth-child(odd){
+    background-color:#bd6921;
+}
+
 /********** ↑ THE LIST ↑ ***********/
 
+article{
+    display:flex;
+    flex-flow: column;
+    
+}
+article section{
+    padding: 10px;
+    margin:5px;
+    width: 50%;
+    background-color: rgba(119, 136, 153, 0.514);
+}
+
+.right-information{
+    grid-area: article;
+
+}
+
+
+.left-information{
+    margin-left:40%;
+    background-color:rgba(148, 169, 189, 0.527); 
+}
+
+footer{
+    grid-area: footer;
+    height: auto;
+    font-size: 50px;
+    color:rgb(155, 154, 154);
+}
