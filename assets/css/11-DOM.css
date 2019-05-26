@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 body{
-
+    background:linear-gradient(limegreen, red);
 }
 
 .some-class{

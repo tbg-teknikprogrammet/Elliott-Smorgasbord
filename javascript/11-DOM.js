@@ -26,3 +26,19 @@ var special = document.getElementsByClassName("special")[1];
 special.classList.add("another-class");
 special.classList.remove("another-class");
 special.classList.toggle("another-class");
+//***************************** */
+//manipulate text and content
+//**************************** */
+
+//select the element
+var pEle = document.querySelector(".test");
+pEle.textContent = "This is a realliy <strong>Awsome</strong> paragraph";
+pEle.innerHTML = "This is a realliy relly <strong>Awsome</strong> paragraph";
+
+//chaining methods
+document.getElementsByTagName("h1")[1].textContent ="Heeloo and WElokom Dudes and Dudets!";
+
+//Manipulateee ateribute
+// getAttribute and setAttribute(två parametrar)
+
+

@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+body{
+    background: black;
+    color:limegreen;
+}
+.toggleBg{
+    background: rebeccapurple;
+}

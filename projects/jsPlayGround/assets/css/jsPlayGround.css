@@ -1,0 +1,150 @@
+@charset 'utf-8';
+
+body{
+    background:#222629;
+    margin:0px;
+    
+}
+.welcome{
+    background-image: url("../img/brainr2.png");
+    background-repeat:no-repeat;
+    background-size: 40%;
+    background-position: center;
+    min-height:600px;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Courier New", Courier, monospace;
+
+
+}
+
+.welcome h3{
+    color: #86C232;
+}
+.welcome h1{
+    font-size:50px;
+    letter-spacing:10px;
+    color:#eee;
+}
+.fas{
+    font-size: 50px;
+    color:#eee;
+    transition:0.6s;
+}
+.fas:hover{
+    transform: rotate(360deg);
+    font-size:60px;
+}
+
+.wrapper{
+    box-shadow: 10px 10px 10px solid black;
+    display: flex;  
+    flex-direction: column;
+    box-shadow: 5px 10px #888888;
+    background-color: #474B4F;
+    margin:5px;
+
+}
+section{
+    display: flex;
+    min-height: 400px;
+    margin:3px;
+   
+}
+
+.code{
+    justify-items: flex-end;
+    flex:1;
+    margin: 10px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    background-color:#373e42;
+}
+.text{
+    flex:2;
+    color:#eee;
+    font-size:20px;
+}
+.text h2{
+    color:#61892F;
+    font-size: 30px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* ↓↓ L I F T I N G  A P P ↓↓ */
+#bar{
+    width: 100%;
+    z-index: 999;
+    margin-bottom:-100px;
+    transition: all .4s;
+    position:sticky;
+}
+#bench{
+    width: 90%;
+
+}
+/* ↑↑ L I F T I N G  A P P ↑↑ */
+
+
+
+/* ↓↓ L I G H T  B O X ↓↓ */
+
+#Storag
+{
+    margin-left:150px;
+}
+.Gallery-Slider{
+    position: relative;
+}
+.Img{
+    width: 50%;
+    transition: 0.5s;
+}
+.Img:hover{
+    transform:scale(1.2);
+}
+#bigImage{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    width: 100%;
+    height:100%;
+    z-index: -2;
+    
+}
+/* ↑↑ L I G H T  B O X ↑↑ */
+
+/* ↓↓ M E D I T A T I O N  A P P ↓↓ */
+#myProgress{
+    width: 100%;
+    background-color: grey;
+    height:30px;
+}
+
+#myBar{
+    width:1%;
+    height:30px;
+    background-color:orangered;
+}
+
+#meditationIcon{
+    transition: 0.4s;
+    display:block;
+    margin:auto;
+}
+
+#meditationIcon:hover{
+    transform: scale(0.9);
+
+}
+/* ↑↑ M E D I T A T I O N  A P P ↑↑ */
+
+canvas{
+    border: 2px solid black;
+}
