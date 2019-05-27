@@ -145,6 +145,27 @@ section{
 }
 /* ↑↑ M E D I T A T I O N  A P P ↑↑ */
 
+/* ↓↓ P A I N T ↓↓ */
 canvas{
     border: 2px solid black;
+}
+/* ↑↑ P A I N T ↑↑ */
+
+/* ↓↓ W H I T E  M O D E ↓↓ */
+.whiteMode{
+    display: flex;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+    
+}
+#whiteModeHeader{
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+    transition:0.4s;
+
+}
+
+#whiteModeHeader:hover{
+    transform:scale(0.9);
 }

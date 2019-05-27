@@ -184,3 +184,18 @@ meditationImage.addEventListener("click", function(){
  });
 
  // ↑↑ P A I N T ↑↑
+
+ // ↓↓ W H I T E  M O D E ↓↓
+ var wrapper = document.getElementsByClassName("wrapper")[0];
+ var getWhiteMode = document.getElementById("whiteModeHeader");
+ var whiteMode = false;
+ getWhiteMode.addEventListener("click",function(){
+    if(whiteMode === false){
+        wrapper.style.backgroundColor = "white";
+        whiteMode = true;
+    }
+    else{
+        wrapper.style.backgroundColor = "#474B4F";
+        whiteMode = false;
+    }
+ });
